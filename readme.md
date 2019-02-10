@@ -159,6 +159,9 @@ grid.scss
 box-model.scss
 ```
     @include meFlex($type:center, $direction: row, $wrap: false, $reverse: false)
+    type: center or "y x"
+          y: top, center, bottom
+          x: left, center, right
 
     @include mePY($val) => 
         padding-top & padding-bottom

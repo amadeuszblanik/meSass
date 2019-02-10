@@ -6,129 +6,90 @@
     @if( $type == center ){
         justify-content: center;
         align-items: center;
-    }@else if($type == top){
-        @if( $direction == row ){
-            align-items: flex-start;
-        }@else if($direction == column){
-            justify-content: flex-start;
-        }@else{
-            @error #{$errMsgDirection};
-        }
-    }@else if($type == bottom){
-        @if( $direction == row ){
-            align-items: flex-end;
-        }@else if($direction == column){
-            justify-content: flex-end;
-        }@else{
-            @error #{$errMsgDirection};
-        }
-    }@else if($type == left){
-        @if( $direction == row ){
-            justify-content: flex-start;
-        }@else if($direction == column){
-            align-items: flex-start;
-        }@else{
-            @error #{$errMsgDirection};
-        }
-    }@else if($type == right){
-        @if( $direction == row ){
-            justify-content: flex-end;
-        }@else if($direction == column){
-            align-items: flex-end;
-        }@else{
-            @error #{$errMsgDirection};
-        }
-    }@else if($type == "top center"){
+    }@else if( $type == "top left" ){
+        align-items: flex-start;
+        justify-content: flex-start;
+    }@else if( $type == "top center" ){
         @if( $direction == row ){
             align-items: flex-start;
             justify-content: center;
-        }@else if($direction == column){
+        }@else if($direction == column) {
+            align-items: center;
             justify-content: flex-start;
-            justify-content: center;
         }@else{
-            @error #{$errMsgDirection};
+            @error #{$errMsgType};
         }
-    }@else if($type == "top bottom"){
+    }@else if( $type == "top right" ){
         @if( $direction == row ){
             align-items: flex-start;
             justify-content: flex-end;
-        }@else if($direction == column){
-            justify-content: flex-start;
+        }@else if($direction == column) {
             align-items: flex-end;
-        }@else{
-            @error #{$errMsgDirection};
-        }
-    }@else if($type == "left top"){
-        @if( $direction == row ){
-            align-items: flex-start;
             justify-content: flex-start;
-        }@else if($direction == column){
-            justify-content: flex-start;
-            align-items: flex-start;
         }@else{
-            @error #{$errMsgDirection};
+            @error #{$errMsgType};
         }
-    }@else if($type == "left center"){
+    }@else if( $type == "center left" ){
         @if( $direction == row ){
             align-items: center;
             justify-content: flex-start;
-        }@else if($direction == column){
+        }@else if($direction == column) {
+            align-items: flex-start;
             justify-content: center;
-            align-items: flex-start;
         }@else{
-            @error #{$errMsgDirection};
+            @error #{$errMsgType};
         }
-    }@else if($type == "left bottom"){
-        @if( $direction == row ){
-            align-items: flex-end;
-            justify-content: flex-start;
-        }@else if($direction == column){
-            justify-content: flex-end;
-            align-items: flex-start;
-        }@else{
-            @error #{$errMsgDirection};
-        }
-    }@else if($type == "right top"){
-        @if( $direction == row ){
-            align-items: flex-start;
-            justify-content: flex-end;
-        }@else if($direction == column){
-            justify-content: flex-end;
-            align-items: flex-end;
-        }@else{
-            @error #{$errMsgDirection};
-        }
-    }@else if($type == "right center"){
+    }@else if( $type == "center right" ){
         @if( $direction == row ){
             align-items: center;
             justify-content: flex-end;
-        }@else if($direction == column){
-            justify-content: center;
+        }@else if($direction == column) {
             align-items: flex-end;
+            justify-content: center;
         }@else{
-            @error #{$errMsgDirection};
+            @error #{$errMsgType};
         }
-    }@else if($type == "right bottom"){
+    }@else if( $type == "bottom left" ){
+        @if( $direction == row ){
+            align-items: flex-end;
+            justify-content: flex-start;
+        }@else if($direction == column) {
+            align-items: flex-start;
+            justify-content: flex-end;
+        }@else{
+            @error #{$errMsgType};
+        }
+    }@else if( $type == "bottom center" ){
+        @if( $direction == row ){
+            align-items: flex-end;
+            justify-content: center;
+        }@else if($direction == column) {
+            align-items: center;
+            justify-content: flex-end;
+        }@else{
+            @error #{$errMsgType};
+        }
+    }@else if( $type == "bottom right" ){
         @if( $direction == row ){
             align-items: flex-end;
             justify-content: flex-end;
-        }@else if($direction == column){
-            justify-content: flex-end;
+        }@else if($direction == column) {
             align-items: flex-end;
+            justify-content: flex-end;
         }@else{
-            @error #{$errMsgDirection};
+            @error #{$errMsgType};
         }
     }@else{
         @error #{$errMsgDirection};
     }
-    @if($direction = column){
-        @if( $reverse = true ){
+    @if($direction == column){
+        @if( $reverse == true ){
             flex-direction: column-reverse;
         }@else{
             flex-direction: column;
         }
-    }@else if($direction = row){
-        @if( $reverse = true ){
+    }@else if($direction == row){
+        @if( $reverse == true ){
             flex-direction: row-reverse;
         }@else{
             //flex-direction: row; He's no need to be here :-)
@@ -136,9 +97,9 @@
     }@else{
         @error #{$errMsgType};
     }
-    @if($wrap = true){
+    @if($wrap == true){
         flex-wrap: wrap;
-    }@else if($wrap = false){
+    }@else if($wrap == false){
         //flex-wrap: nowrap; He's no need to be here :-)
     }@else{
         @error #{$errMsgWrap};
