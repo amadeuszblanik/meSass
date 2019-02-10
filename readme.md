@@ -132,6 +132,8 @@ configs.scss
 
     msBreakpoint($value, $breakpointsMap)
     $breakpointsMap - optional
+
+    msMotion($value)
 ```
 
 sizes.scss
@@ -221,4 +223,9 @@ typeface.scss
 
     @include meLinkHate( $color, $decoration )
         *:Hover Active T E
+```
+
+motions.scss
+```
+    @include meMotion($property: "all", $timing-function: msMotion(standard), $duration: msMotion(duration))
 ```

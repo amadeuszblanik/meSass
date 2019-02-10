@@ -1,0 +1,5 @@
+@mixin meMotion($property: "all", $timing-function: msMotion(standard), $duration: msMotion(duration)){
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+    transition-property: $property;
+}

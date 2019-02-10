@@ -42,3 +42,11 @@
     @error "ERR> You've been selected breakpoints map (#{msSettings(breakpoints-layout)}) that's not defined. Please check your settings";
   }
 }
+
+@function msMotion($value){
+  @if ( map-has-key($ms-motion, $value) ){
+    @return map-get($ms-motion, $value );
+  }@else{
+    @error "ERR> #{$value} is not defined in $ms-motion";
+  }
+}
