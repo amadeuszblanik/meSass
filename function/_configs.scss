@@ -1,0 +1,44 @@
+@function meColor($colorName){
+  @if ( map-has-key($ms-colors, $colorName) ){
+    @return map-get($ms-colors, $colorName );
+  }@else{
+    @error "ERR> #{$colorName} didn't exists in $ms-colors";
+  }
+}
+
+@function msSettings($value){
+  @if ( map-has-key($ms-settings, $value) ){
+    @return map-get($ms-settings, $value );
+  }@else{
+    @error "ERR> #{$value} is not defined in $ms-settings";
+  }
+}
+
+@function msSketch($value){
+  @if ( map-has-key($ms-sketch, $value) ){
+    @return map-get($ms-sketch, $value );
+  }@else{
+    @error "ERR> #{$value} is not defined in $ms-sketch";
+  }
+}
+
+@function msTypeface($value){
+  @if ( map-has-key($ms-typeface, $value) ){
+    @return map-get($ms-typeface, $value );
+  }@else{
+    @error "ERR> #{$value} is not defined in $ms-typeface";
+  }
+}
+
+@function msBreakpoint($value, $breakpointsMap: msSettings(breakpoints-layout)){
+  @if ( map-has-key($ms-breakpoints, $breakpointsMap) ){
+    $thisBp: map-get($ms-breakpoints, $breakpointsMap);
+    @if( map-has-key($thisBp, $value) ){
+      @return map-get($thisBp, $value);
+    }@else{
+      @error "ERR> Breakpoints map that you have choisen exists, but not this (#{$value}) value";
+    }
+  }@else{
+    @error "ERR> You've been selected breakpoints map (#{msSettings(breakpoints-layout)}) that's not defined. Please check your settings";
+  }
+}

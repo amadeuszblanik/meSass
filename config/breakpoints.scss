@@ -1,0 +1,69 @@
+$ms-breakpoints: (
+        meSass: (
+                xs: 600px,
+                sm: 720px,
+                md: 840px,
+                lg: 1280px,
+                xl: 1440px
+        ),
+        bootstrap-plus: (
+                sm: 576px,
+                md: 768px,
+                lg: 992px,
+                xl: 1280px,
+                xxl: 1400px,
+                xxxl: 1620px
+        ),
+        bootstrap: (
+                sm: 576px,
+                md: 768px,
+                lg: 992px,
+                xl: 1200px,
+        ),
+        material-ui: (
+                xs: 0px,
+                sm: 600px,
+                md: 960px,
+                lg: 1280px,
+                xl: 1920px,
+        ),
+        material-window: (
+                xs: 600px,
+                sm: 1024px,
+                md: 1440px,
+                lg: 1920px
+        ),
+        material-grid: (
+                bp-4-16: 0px,
+                bp-8-16: 600px,
+                bp-8-24: 720px,
+                bp-12-24: 840px,
+        ),
+        material-device: (
+                sm-phone: 360px,
+                md-phone: 400px,
+                lg-phone: 600px,
+                sm-tablet: 720px,
+                lg-tablet: 960px,
+                landscape-sm-phone: 600px,
+                landscape-md-phone: 720px,
+                landscape-lg-phone: 960px,
+                landscape-sm-tablet: 1024px,
+                landscape-lg-table5: 1440px
+        ),
+        apple: (
+                iphone: 320px,
+                iphone-8: 375px,
+                iphone-8plus: 414px,
+                iphone-xs: 375px,
+                iphone-xs-max: 414px,
+                iphone-xr: 413px,
+                ipad: 768px,
+                ipad-landscape: 1024px,
+                ipad-pro: 1024px,
+                ipad-pro-landscape: 1366px,
+                ipad-pro-small: 834px, // 2gen
+                ipad-pro-small-landscape: 1112px, //2gen
+        )
+
+);

@@ -1,0 +1,166 @@
+@mixin meFlex($type:center, $direction: row, $wrap: false, $reverse: false) {
+    $errMsgDirection: "ERR> You've provided wrong direction value.";
+    $errMsgType: "ERR> You've provided wrong type value.";
+    $errMsgWrap: "ERR> You've provided wrong wrap value.";
+    display: flex;
+    @if( $type == center ){
+        justify-content: center;
+        align-items: center;
+    }@else if($type == top){
+        @if( $direction == row ){
+            align-items: flex-start;
+        }@else if($direction == column){
+            justify-content: flex-start;
+        }@else{
+            @error #{$errMsgDirection};
+        }
+    }@else if($type == bottom){
+        @if( $direction == row ){
+            align-items: flex-end;
+        }@else if($direction == column){
+            justify-content: flex-end;
+        }@else{
+            @error #{$errMsgDirection};
+        }
+    }@else if($type == left){
+        @if( $direction == row ){
+            justify-content: flex-start;
+        }@else if($direction == column){
+            align-items: flex-start;
+        }@else{
+            @error #{$errMsgDirection};
+        }
+    }@else if($type == right){
+        @if( $direction == row ){
+            justify-content: flex-end;
+        }@else if($direction == column){
+            align-items: flex-end;
+        }@else{
+            @error #{$errMsgDirection};
+        }
+    }@else if($type == "top center"){
+        @if( $direction == row ){
+            align-items: flex-start;
+            justify-content: center;
+        }@else if($direction == column){
+            justify-content: flex-start;
+            justify-content: center;
+        }@else{
+            @error #{$errMsgDirection};
+        }
+    }@else if($type == "top bottom"){
+        @if( $direction == row ){
+            align-items: flex-start;
+            justify-content: flex-end;
+        }@else if($direction == column){
+            justify-content: flex-start;
+            align-items: flex-end;
+        }@else{
+            @error #{$errMsgDirection};
+        }
+    }@else if($type == "left top"){
+        @if( $direction == row ){
+            align-items: flex-start;
+            justify-content: flex-start;
+        }@else if($direction == column){
+            justify-content: flex-start;
+            align-items: flex-start;
+        }@else{
+            @error #{$errMsgDirection};
+        }
+    }@else if($type == "left center"){
+        @if( $direction == row ){
+            align-items: center;
+            justify-content: flex-start;
+        }@else if($direction == column){
+            justify-content: center;
+            align-items: flex-start;
+        }@else{
+            @error #{$errMsgDirection};
+        }
+    }@else if($type == "left bottom"){
+        @if( $direction == row ){
+            align-items: flex-end;
+            justify-content: flex-start;
+        }@else if($direction == column){
+            justify-content: flex-end;
+            align-items: flex-start;
+        }@else{
+            @error #{$errMsgDirection};
+        }
+    }@else if($type == "right top"){
+        @if( $direction == row ){
+            align-items: flex-start;
+            justify-content: flex-end;
+        }@else if($direction == column){
+            justify-content: flex-end;
+            align-items: flex-end;
+        }@else{
+            @error #{$errMsgDirection};
+        }
+    }@else if($type == "right center"){
+        @if( $direction == row ){
+            align-items: center;
+            justify-content: flex-end;
+        }@else if($direction == column){
+            justify-content: center;
+            align-items: flex-end;
+        }@else{
+            @error #{$errMsgDirection};
+        }
+    }@else if($type == "right bottom"){
+        @if( $direction == row ){
+            align-items: flex-end;
+            justify-content: flex-end;
+        }@else if($direction == column){
+            justify-content: flex-end;
+            align-items: flex-end;
+        }@else{
+            @error #{$errMsgDirection};
+        }
+    }@else{
+        @error #{$errMsgDirection};
+    }
+    @if($direction = column){
+        @if( $reverse = true ){
+            flex-direction: column-reverse;
+        }@else{
+            flex-direction: column;
+        }
+    }@else if($direction = row){
+        @if( $reverse = true ){
+            flex-direction: row-reverse;
+        }@else{
+            //flex-direction: row; He's no need to be here :-)
+        }
+    }@else{
+        @error #{$errMsgType};
+    }
+    @if($wrap = true){
+        flex-wrap: wrap;
+    }@else if($wrap = false){
+        //flex-wrap: nowrap; He's no need to be here :-)
+    }@else{
+        @error #{$errMsgWrap};
+    }
+}
+
+@mixin mePY($val) {
+    padding-top: $val;
+    padding-bottom: $val;
+}
+
+@mixin mePX($val) {
+    padding-left: $val;
+    padding-right: $val;
+}
+
+@mixin meMY($val) {
+    margin-top: $val;
+    margin-bottom: $val;
+}
+
+@mixin meMX($val) {
+    margin-left: $val;
+    margin-right: $val;
+}

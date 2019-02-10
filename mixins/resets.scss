@@ -1,0 +1,17 @@
+@mixin meReset($type:default) {
+    @if( $type == focus ){
+        &:focus{
+            outline: none;
+        }
+    }@else{
+        padding: 0;
+        margin: 0;
+        @if($type == button){
+            border: none;
+            border-radius: 0;
+            background-color: transparent;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+    }
+}

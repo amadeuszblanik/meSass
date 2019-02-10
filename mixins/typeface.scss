@@ -1,0 +1,65 @@
+@mixin meTypeface($size: 1rem, $weight: 400, $style:false){
+    font-size: font-size($size);
+    @if($weight == black){
+        font-weight: 900;
+    }@else if($weight == bold){
+        font-weight: 700;
+    }@else if($weight == semi-bold){
+        font-weight: 600;
+    }@else if($weight == medium){
+        font-weight: 500;
+    }@else if($weight == regular){
+        font-weight: 400;
+    }@else if($weight == light){
+        font-weight: 300;
+    }@else if($weight == thin){
+        font-weight: 200;
+    }@else if($weight == ultrathin){
+        font-weight: 100;
+    }@else{
+        font-weight: $weight;
+    }
+    @if($style != false){
+        font-style: $style;
+    }
+}
+
+@mixin meFonts($fonts: msTypeface(default)) {
+    font-family: $fonts;
+}
+
+
+// LINKS
+
+@mixin meLink( $color-link: meColor(text), $decoration-link: underline, $color-hover: meColor(primary), $decoration-hover: underline, $focus: false ) {
+    color: $color-link;
+    &:link, &:visited{
+        color: $color-link;
+        text-decoration: $decoration-link;
+    }
+    &:hover, &:active{
+        color: $color-hover;
+        text-decoration: $decoration-hover;
+    }
+    @if( $focus == true OR $focus == 1 ){
+        &:focus{
+            outline: none
+        }
+    }
+}
+
+@mixin meLinkLove( $color, $decoration ) {
+    color: $color;
+    text-decoration: $decoration;
+    &:link, &:visited{
+        color: $color;
+        text-decoration: $decoration;
+    }
+}
+
+@mixin meLinkHate( $color, $decoration ) {
+    &:hover, &:active{
+        color: $color;
+        text-decoration: $decoration;
+    }
+}

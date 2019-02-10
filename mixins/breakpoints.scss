@@ -1,0 +1,21 @@
+@mixin meBreakpoint($min, $max: 0, $map:msSettings(breakpoints-layout)){
+    @if( $min == 0 ){
+      @if( $max == 0 ){
+        @error "ERR> You can't make @media query from 0px to 0px.";
+      }@else{
+        @media screen and (max-width: msBreakpoint($max, $map) - 0.02px){
+          @content;
+        }
+      }
+    }@else{
+      @if( $max == 0 ){
+        @media screen and (min-width: msBreakpoint($min, $map)){
+          @content;
+        }
+      }@else{
+        @media screen and (min-width: msBreakpoint($min, $map)) and (max-width: msBreakpoint($max, $map) - 0.02px){
+          @content;
+        }
+      }
+    }
+  }
