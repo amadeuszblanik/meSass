@@ -1,5 +1,5 @@
-@mixin meTypeface($size: 1rem, $weight: 400, $style:false){
-    font-size: font-size($size);
+@mixin meTypeface($size: msTypeface(base-font-size), $weight: 400, $style:false){
+    font-size: inRem($size);
     @if($weight == black){
         font-weight: 900;
     }@else if($weight == bold){
