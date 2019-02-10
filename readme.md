@@ -174,6 +174,12 @@ box-model.scss
 
     @include meMX($val) =>
         margin-right & margin-left
+
+    @include meWidthMax($val)
+
+    @include meWidthMin($val)
+
+    @include meWidthAll($val)
     
 ```
 

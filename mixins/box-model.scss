@@ -125,3 +125,19 @@
     margin-left: $val;
     margin-right: $val;
 }
+
+@mixin meWidthMax($val){
+    max-width: $val;
+    width: $val;
+}
+
+@mixin meWidthMin($val){
+    min-width: $val;
+    width: $val;
+}
+
+@mixin meWidthAll($val){
+    max-width: $val;
+    min-width: $val;
+    width: $val;
+}
