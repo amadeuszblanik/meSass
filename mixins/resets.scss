@@ -1,17 +1,25 @@
-@mixin meReset($type:default) {
-    @if( $type == focus ){
-        &:focus{
-            outline: none;
-        }
-    }@else{
+@mixin meReset {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin meResetButton {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+@mixin meResetFocus {
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin meResetList {
+    list-style: none;
+    & > li {
         padding: 0;
-        margin: 0;
-        @if($type == button){
-            border: none;
-            border-radius: 0;
-            background-color: transparent;
-            -webkit-appearance: none;
-            appearance: none;
-        }
     }
 }

@@ -192,10 +192,13 @@ motions.scss
 
 resets.scss
 ```
-    @include meReset($type:default)
-        $default => padding, margin set to 0
-        $button => above + border, border-radius, backgrond-color and apperance
-        $focus => set outline@focus to none
+    @include meReset
+
+    @include meResetButton
+
+    @include meResetFocus
+
+    @include meResetList
 
 ```
 
