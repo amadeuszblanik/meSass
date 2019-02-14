@@ -1,0 +1,8 @@
+@mixin mePlaceholder {
+  &:-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+}

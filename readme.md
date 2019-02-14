@@ -193,6 +193,13 @@ breakpoints.scss
     $map - optional
 ```
 
+forms.scss
+```
+    @include mePlaceholder{
+        @content
+    }
+```
+
 motions.scss
 ```
     soon
