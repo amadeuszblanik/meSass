@@ -230,6 +230,9 @@ typeface.scss
 
     @include meLinkHate( $color, $decoration )
         *:Hover Active T E
+
+    @include meHeaders
+        @content
 ```
 
 motions.scss
