@@ -131,7 +131,7 @@ configs.scss
     msTypeface($value)
 
     msBreakpoint($value, $breakpointsMap)
-    $breakpointsMap - optional
+        $breakpointsMap - optional
 
     msMotion($value)
 ```
@@ -139,16 +139,19 @@ configs.scss
 sizes.scss
 ```
     inVw($sizeInPx, $baseSize)
-    $baseSize - optional
+        $baseSize - optional
 
     inVh($sizeInPx, $baseSize)
-    $baseSize - optional
+        $baseSize - optional
 
     inRem($sizeInPx, $baseSize)
-    $baseSize - optional
+        $baseSize - optional
 
     inEm($sizeInPx, $baseSize)
-    $baseSize - optional
+        $baseSize - optional
+
+    inGrid($sizeInGrid, $baseSize)
+        $baseSize - optional
 ```
 
 grid.scss

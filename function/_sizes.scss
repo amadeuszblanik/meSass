@@ -1,15 +1,19 @@
-@function inVw($sizeInPx, $baseSize: msSketch(width)){
+@function inVw($sizeInPx, $baseSize: msSketch(width)) {
   @return $sizeInPx / $baseSize * 100vw;
 }
 
-@function inVh($sizeInPx, $baseSize: msSketch(height)){
+@function inVh($sizeInPx, $baseSize: msSketch(height)) {
   @return $sizeInPx / $baseSize * 100vh;
 }
 
-@function inRem($sizeInPx, $baseSize: msTypeface(base-font-size)){
+@function inRem($sizeInPx, $baseSize: msTypeface(base-font-size)) {
   @return $sizeInPx / $baseSize + rem;
 }
 
-@function inEm($sizeInPx, $baseSize: msTypeface(base-font-size)){
+@function inEm($sizeInPx, $baseSize: msTypeface(base-font-size)) {
   @return $sizeInPx / $baseSize + em;
+}
+
+@function inGrid($sizeInGrid, $baseSize: msSketch(grid)) {
+  @return $sizeInGrid / $baseSize * 100%;
 }
