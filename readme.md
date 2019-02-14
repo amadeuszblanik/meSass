@@ -233,6 +233,12 @@ typeface.scss
 
     @include meHeaders
         @content
+
+    @include meLinkLoveCustom( $force:false )
+        @content
+
+    @include meLinkHateCustom
+        @content
 ```
 
 motions.scss

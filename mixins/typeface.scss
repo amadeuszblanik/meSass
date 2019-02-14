@@ -74,3 +74,18 @@
         @content;
     }
 }
+
+@mixin meLinkLoveCustom( $force:false ) {
+    @if( $force == true ){
+        @content;
+    }
+    &:link, &:visited{
+        @content;
+    }
+}
+
+@mixin meLinkHateCustom {
+    &:hover, &:active {
+        @content;
+    }
+}
