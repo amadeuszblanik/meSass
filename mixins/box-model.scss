@@ -3,7 +3,7 @@
     $errMsgType: "ERR> You've provided wrong type value.";
     $errMsgWrap: "ERR> You've provided wrong wrap value.";
     display: flex;
-    @if( $type == center ){
+    @if( $type == center OR $type == "center center" ){
         justify-content: center;
         align-items: center;
     }@else if( $type == "top left" ){
@@ -92,7 +92,7 @@
         @if( $reverse == true ){
             flex-direction: row-reverse;
         }@else{
-            //flex-direction: row; He's no need to be here :-)
+            flex-direction: row;
         }
     }@else{
         @error #{$errMsgType};
@@ -100,7 +100,7 @@
     @if($wrap == true){
         flex-wrap: wrap;
     }@else if($wrap == false){
-        //flex-wrap: nowrap; He's no need to be here :-)
+        flex-wrap: nowrap;
     }@else{
         @error #{$errMsgWrap};
     }
