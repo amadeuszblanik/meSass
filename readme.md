@@ -153,7 +153,8 @@ sizes.scss
 
 grid.scss
 ```
-    soon
+    @include meGridInit
+    I'll change that later. This is just the best solutions for now.
 ```
 ---
 
