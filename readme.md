@@ -122,7 +122,7 @@ typeface.scss
 ## Functions
 configs.scss
 ```
-    meColor($colorname)
+    meColor($colorname, $opacity)
 
     msSettings($value)
 

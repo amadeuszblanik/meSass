@@ -2,6 +2,8 @@ dist
 gulpfile.js
 package.json
 yarn.lock
+.idea
+.vscode
 
 # Created by https://www.gitignore.io/api/git,node,macos,webstorm
 # Edit at https://www.gitignore.io/?templates=git,node,macos,webstorm
