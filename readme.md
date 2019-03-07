@@ -131,7 +131,7 @@ configs.scss
     msTypeface($value)
 
     msBreakpoint($value, $breakpointsMap)
-    $breakpointsMap - optional
+        $breakpointsMap - optional
 
     msMotion($value)
 ```
@@ -139,16 +139,19 @@ configs.scss
 sizes.scss
 ```
     inVw($sizeInPx, $baseSize)
-    $baseSize - optional
+        $baseSize - optional
 
     inVh($sizeInPx, $baseSize)
-    $baseSize - optional
+        $baseSize - optional
 
     inRem($sizeInPx, $baseSize)
-    $baseSize - optional
+        $baseSize - optional
 
     inEm($sizeInPx, $baseSize)
-    $baseSize - optional
+        $baseSize - optional
+
+    inGrid($sizeInGrid, $baseSize)
+        $baseSize - optional
 ```
 
 grid.scss
@@ -194,6 +197,13 @@ breakpoints.scss
     $map - optional
 ```
 
+forms.scss
+```
+    @include mePlaceholder{
+        @content
+    }
+```
+
 motions.scss
 ```
     soon
@@ -224,6 +234,15 @@ typeface.scss
 
     @include meLinkHate( $color, $decoration )
         *:Hover Active T E
+
+    @include meHeaders
+        @content
+
+    @include meLinkLoveCustom( $force:false )
+        @content
+
+    @include meLinkHateCustom
+        @content
 ```
 
 motions.scss

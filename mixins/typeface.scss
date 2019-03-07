@@ -63,3 +63,29 @@
         text-decoration: $decoration;
     }
 }
+
+@mixin meHeaders {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+        @content;
+    }
+}
+
+@mixin meLinkLoveCustom( $force:false ) {
+    @if( $force == true ){
+        @content;
+    }
+    &:link, &:visited{
+        @content;
+    }
+}
+
+@mixin meLinkHateCustom {
+    &:hover, &:active {
+        @content;
+    }
+}
