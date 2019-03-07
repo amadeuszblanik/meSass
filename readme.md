@@ -1,5 +1,5 @@
 # meSass
-Current state: indev ~ Version: FEB2019PUBLIC1 ~ MIT ~ Blanik ~ 2019
+Current state: indev ~ Version: MAR2019PUBLIC1 ~ MIT ~ Blanik ~ 2019
 
 This is a first public version of meSass (formerly named: SASS.Framework). It's still in indev state, so some features might not work properly or might be changed in future.
 
