@@ -1,0 +1,35 @@
+@mixin meSocialColor {
+  @each $profile, $color in $ms-colors-social {
+    &.#{$profile}{
+      color: $color;
+    }
+  }
+}
+
+@mixin meSocialColorHover {
+  @each $profile, $color in $ms-colors-social {
+    &.#{$profile}{
+      &:hover, &:active {
+        color: $color;
+      }
+    }
+  }
+}
+
+@mixin meSocialColorBackground {
+  @each $profile, $color in $ms-colors-social {
+    &.#{$profile}{
+      background-color: $color;
+    }
+  }
+}
+
+@mixin meSocialColorBackgroundHover {
+  @each $profile, $color in $ms-colors-social {
+    &.#{$profile}{
+      &:hover, &:active {
+        background-color: $color;
+      }
+    }
+  }
+}

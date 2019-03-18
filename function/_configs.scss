@@ -10,6 +10,18 @@
   }
 }
 
+@function msSocialColor($colorName, $opacity){
+  @if ( map-has-key($ms-colors-social, $colorName) ){
+    @if ($opacity == false) {
+      @return map-get($ms-colors-social, $colorName );
+    } @else {
+      @return rgba(map-get($ms-colors-social, $colorName ), $opacity);
+    }
+  }@else{
+    @error "ERR> #{$colorName} didn't exists in $ms-colors-social";
+  }
+}
+
 @function msSettings($value){
   @if ( map-has-key($ms-settings, $value) ){
     @return map-get($ms-settings, $value );

@@ -85,6 +85,7 @@ breakpoints.scss (for: breakpoints-layout)
 colors.scss
 
 meColor(name) will give you value
+msSocialColor(name) will give you value
 ```
     name: value
 ```
@@ -195,6 +196,14 @@ breakpoints.scss
         @content
     }
     $map - optional
+```
+
+colors.scss
+```
+    @include meSocialColor
+    @include meSocialColorHover
+    @include meSocialColorBackground
+    @include meSocialColorBackgroundHover
 ```
 
 forms.scss
