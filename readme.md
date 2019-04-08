@@ -155,21 +155,11 @@ sizes.scss
         $baseSize - optional
 ```
 
-grid.scss
-```
-    @include meGridInit
-    I'll change that later. This is just the best solutions for now.
-```
 ---
 
 ## Mixins
 box-model.scss
 ```
-    @include meFlex($type:center, $direction: row, $wrap: false, $reverse: false)
-    type: center or "y x"
-          y: top, center, bottom
-          x: left, center, right
-
     @include mePY($val) => 
         padding-top & padding-bottom
 
@@ -188,6 +178,19 @@ box-model.scss
 
     @include meWidthAll($val)
     
+```
+
+grid/flex.scss
+```
+    @include meFlex($axisY:{top, *center*, bottom}, $axisX:{left, *center*, right}, $direction: {*row*, column}, $wrap: {true, *false*})
+
+```
+
+grid/grid.scss
+```
+    @include meGridInit
+    I'll change that later. This is just the best solutions for now.
+
 ```
 
 breakpoints.scss
