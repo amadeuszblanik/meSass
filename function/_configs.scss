@@ -1,4 +1,4 @@
-@function meColor($colorName, $opacity){
+@function meColor($colorName, $opacity:false){
   @if ( map-has-key($ms-colors, $colorName) ){
     @if ($opacity == false) {
       @return map-get($ms-colors, $colorName );
