@@ -180,6 +180,12 @@ box-model.scss
     
 ```
 
+grid/container.scss
+```
+    @include meContainer
+
+```
+
 grid/flex.scss
 ```
     @include meFlex($axisY:{top, *center*, bottom}, $axisX:{left, *center*, right}, $direction: {*row*, column}, $wrap: {true, *false*})

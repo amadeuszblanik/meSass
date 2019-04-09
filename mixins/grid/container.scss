@@ -1,0 +1,18 @@
+@mixin meContainer {
+  max-width: calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right));
+  width: calc(100% - 32px);
+
+  margin: 0 auto;
+  @supports (padding: max(0px)) {
+    padding: unquote('max(0, env(safe-area-inset-top))') unquote('max(0, env(safe-area-inset-right))') unquote('max(0, env(safe-area-inset-bottom))') unquote('max(0, env(safe-area-inset-left))');
+  }
+  @include meBreakpoint(md) {
+    max-width: calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right));
+    width: calc(100% - 48px);
+  }
+  @include meBreakpoint(xl) {
+    max-width: 1430px;
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
