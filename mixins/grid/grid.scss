@@ -1,17 +1,20 @@
-@mixin meGridInit {
+@mixin meGrid {
+  @warn "This function may change in further version of meSass(), but I need much more time for that.";
+
   display: grid;
-  grid-template: repeat(4, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: inRem(16);
-  @include meBreakpoint(sm) {
-    grid-template-columns: repeat(8, 1fr);
-  }
-  @include meBreakpoint(md) {
-    grid-gap: inRem(24);
-  }
-  @include meBreakpoint(lg) {
-    grid-template-columns: repeat(12, 1fr);
+  @each $breakpoint, $value in $ms-grid {
+    @include meBreakpoint($breakpoint){
+      grid-template-columns: repeat(#{$value}, 1fr);
+    }
   }
 
-  @warn "This function will change in further version of meSass(), but I need much more time for that.";
+  @each $breakpoint, $value in $ms-grid-gap {
+    @include meBreakpoint($breakpoint){
+      grid-gap: $value;
+    }
+  }
+}
+
+.dupa {
+  @include meGridInit;
 }

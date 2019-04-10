@@ -145,6 +145,10 @@ configs.scss
         $breakpointsMap - optional
 
     msMotion($value)
+
+    msGrid($value)
+
+    msGridGap($value)
 ```
 
 sizes.scss
@@ -210,8 +214,8 @@ grid/flex.scss
 grid/grid.scss
 
 ```
-    @include meGridInit
-    I'll change that later. This is just the best solutions for now.
+    @include meGrid
+    Needs to be configured in config/grid.scss;
 
 ```
 

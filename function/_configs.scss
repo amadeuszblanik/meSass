@@ -66,3 +66,19 @@
     @error "ERR> #{$value} is not defined in $ms-motion";
   }
 }
+
+@function msGrid($value) {
+  @if (map-has-key($ms-grid, $value)) {
+    @return map-get($ms-grid, $value);
+  } @else {
+    @error "ERR> #{$value} is not defined in $ms-grid";
+  }
+}
+
+@function msGridGap($value) {
+  @if (map-has-key($ms-grid-gap, $value)) {
+    @return map-get($ms-grid-gap, $value);
+  } @else {
+    @error "ERR> #{$value} is not defined in $ms-grid-gap";
+  }
+}
