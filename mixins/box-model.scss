@@ -1,35 +1,35 @@
 @mixin mePY($val) {
-    padding-top: $val;
-    padding-bottom: $val;
+  padding-top: $val;
+  padding-bottom: $val;
 }
 
 @mixin mePX($val) {
-    padding-left: $val;
-    padding-right: $val;
+  padding-left: $val;
+  padding-right: $val;
 }
 
 @mixin meMY($val) {
-    margin-top: $val;
-    margin-bottom: $val;
+  margin-top: $val;
+  margin-bottom: $val;
 }
 
 @mixin meMX($val) {
-    margin-left: $val;
-    margin-right: $val;
+  margin-left: $val;
+  margin-right: $val;
 }
 
-@mixin meWidthMax($val){
-    max-width: $val;
-    width: $val;
+@mixin meWidthMax($val) {
+  max-width: $val;
+  width: $val;
 }
 
-@mixin meWidthMin($val){
-    min-width: $val;
-    width: $val;
+@mixin meWidthMin($val) {
+  min-width: $val;
+  width: $val;
 }
 
-@mixin meWidthAll($val){
-    max-width: $val;
-    min-width: $val;
-    width: $val;
+@mixin meWidthAll($val) {
+  max-width: $val;
+  min-width: $val;
+  width: $val;
 }

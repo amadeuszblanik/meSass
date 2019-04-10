@@ -1,13 +1,15 @@
 # meSass
+
 Current state: indev ~ Version: MAR2019PUBLIC1 ~ MIT ~ Blanik ~ 2019
 
 This is a first public version of meSass (formerly named: SASS.Framework). It's still in indev state, so some features might not work properly or might be changed in future.
 
-
 ## Config
+
 Config path: /config
 
 settings.scss
+
 ```
     normalize: true/false [4.0.0]
     bootstrap: true/false [4.2.1]
@@ -16,6 +18,7 @@ settings.scss
 ```
 
 breakpoints.scss (for: breakpoints-layout)
+
 ```
     meSass: (default)
         xs - 600px
@@ -43,7 +46,7 @@ breakpoints.scss (for: breakpoints-layout)
         lg: 1200px
         xl: 1920px
 
-    material-window: 
+    material-window:
         xs: 600px
         sm: 1024px
         md: 1440px
@@ -86,11 +89,13 @@ colors.scss
 
 meColor(name) will give you value
 msSocialColor(name) will give you value
+
 ```
     name: value
 ```
 
 motion.scss
+
 ```
     duration: default transition time (default: 725px)
 
@@ -102,6 +107,7 @@ motion.scss
 ```
 
 sketch.scss
+
 ```
     width: your sketch/psd file width (default: 1920px)
     height: related height (default: 1080px)
@@ -109,6 +115,7 @@ sketch.scss
 ```
 
 typeface.scss
+
 ```
     base-font-size: 1rem size in px (default: 16[px])
     base-font-weight: (default: 400|regular)
@@ -118,10 +125,13 @@ typeface.scss
     mono: #{"SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace}
 
 ```
+
 ---
 
 ## Functions
+
 configs.scss
+
 ```
     meColor($colorname, $opacity)
 
@@ -138,6 +148,7 @@ configs.scss
 ```
 
 sizes.scss
+
 ```
     inVw($sizeInPx, $baseSize)
         $baseSize - optional
@@ -158,9 +169,11 @@ sizes.scss
 ---
 
 ## Mixins
+
 box-model.scss
+
 ```
-    @include mePY($val) => 
+    @include mePY($val) =>
         padding-top & padding-bottom
 
     @include mePX($val) =>
@@ -177,22 +190,25 @@ box-model.scss
     @include meWidthMin($val)
 
     @include meWidthAll($val)
-    
+
 ```
 
 grid/container.scss
+
 ```
     @include meContainer
 
 ```
 
 grid/flex.scss
+
 ```
     @include meFlex($axisY:{top, *center*, bottom}, $axisX:{left, *center*, right}, $direction: {*row*, column}, $wrap: {true, *false*})
 
 ```
 
 grid/grid.scss
+
 ```
     @include meGridInit
     I'll change that later. This is just the best solutions for now.
@@ -200,6 +216,7 @@ grid/grid.scss
 ```
 
 breakpoints.scss
+
 ```
     @include meBreakpoint($min, $max, $map){
         @content
@@ -208,6 +225,7 @@ breakpoints.scss
 ```
 
 colors.scss
+
 ```
     @include meSocialColor
     @include meSocialColorHover
@@ -216,6 +234,7 @@ colors.scss
 ```
 
 forms.scss
+
 ```
     @include mePlaceholder{
         @content
@@ -223,11 +242,13 @@ forms.scss
 ```
 
 motions.scss
+
 ```
     soon
 ```
 
 resets.scss
+
 ```
     @include meReset
 
@@ -240,6 +261,7 @@ resets.scss
 ```
 
 typeface.scss
+
 ```
     @include meTypeface($size: 1rem, $weight: 400, $style:false)
 
@@ -248,7 +270,7 @@ typeface.scss
     @include meLink( $color-link: meColor(text), $decoration-link: underline, $color-hover: meColor(primary), $decoration-hover: underline, $focus: false );
 
     @include meLinkLove( $color, $decoration )
-        *:Link, O Visited E 
+        *:Link, O Visited E
 
     @include meLinkHate( $color, $decoration )
         *:Hover Active T E
@@ -264,6 +286,7 @@ typeface.scss
 ```
 
 motions.scss
+
 ```
     @include meMotion($property: "all", $timing-function: msMotion(standard), $duration: msMotion(duration))
 ```

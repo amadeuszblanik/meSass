@@ -1,6 +1,6 @@
 @mixin meSocialColor {
   @each $profile, $color in $ms-colors-social {
-    &.#{$profile}{
+    &.#{$profile} {
       color: $color;
     }
   }
@@ -8,8 +8,9 @@
 
 @mixin meSocialColorHover {
   @each $profile, $color in $ms-colors-social {
-    &.#{$profile}{
-      &:hover, &:active {
+    &.#{$profile} {
+      &:hover,
+      &:active {
         color: $color;
       }
     }
@@ -18,7 +19,7 @@
 
 @mixin meSocialColorBackground {
   @each $profile, $color in $ms-colors-social {
-    &.#{$profile}{
+    &.#{$profile} {
       background-color: $color;
     }
   }
@@ -26,8 +27,9 @@
 
 @mixin meSocialColorBackgroundHover {
   @each $profile, $color in $ms-colors-social {
-    &.#{$profile}{
-      &:hover, &:active {
+    &.#{$profile} {
+      &:hover,
+      &:active {
         background-color: $color;
       }
     }
