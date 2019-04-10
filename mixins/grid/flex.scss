@@ -13,6 +13,8 @@
       align-items: flex-start;
     } @else if ($axisY == "bottom") {
       align-items: flex-end;
+    } @else if ($axisY == "stretch") {
+      align-items: stretch;
     } @else {
       @error #{$errMsgAxisY};
     }
@@ -23,6 +25,8 @@
       justify-content: flex-start;
     } @else if ($axisX == "right") {
       justify-content: flex-end;
+    } @else if ($axisX == "stretch") {
+      justify-content: stretch;
     } @else {
       @error #{$errMsgAxisX};
     }
@@ -32,7 +36,6 @@
     } @else {
       flex-direction: row;
     }
-
   } @else if ($direction == "column") {
     @if ($axisY == "center") {
       justify-content: flex-start;
@@ -40,6 +43,8 @@
       justify-content: flex-start;
     } @else if ($axisY == "bottom") {
       justify-content: flex-end;
+    } @else if ($axisY == "stretch") {
+      justify-content: stretch;
     } @else {
       @error #{$errMsgAxisY};
     }
@@ -50,6 +55,8 @@
       align-items: flex-start;
     } @else if ($axisX == "right") {
       align-items: flex-end;
+    } @else if ($axisX == "stretch") {
+      align-items: stretch;
     } @else {
       @error #{$errMsgAxisX};
     }
@@ -62,7 +69,6 @@
     } @else {
       @error #{$errMsgWrap};
     }
-
   } @else {
     @error #{$errMsgDirection};
   }
