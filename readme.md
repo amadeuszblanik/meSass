@@ -1,8 +1,9 @@
 # meSass
 
-Current state: indev ~ Version: ARPIL2019PUBLIC1 ~ MIT ~ Blanik.me ~ 2018 - 2019
+Current state: alpha ~ Version: 0.1.0 ~ MIT ~ Blanik.me ~ 2018 - 2019
 
-This is a first public version of meSass (formerly named: SASS.Framework). It's still in indev state, so some features might not work properly or might be changed in future.
+This is a first public version of meSass (formerly named: SASS.Framework).
+It's still in alpha state, but growing rapidly!
 
 ## Config
 
@@ -11,8 +12,8 @@ Config path: /config
 settings.scss
 
 ```
-    normalize: true/false [4.0.0]
-    bootstrap: true/false [4.2.1]
+    normalize: normalize/reset/false
+    bootstrap: true/false [4.3.1 - grid]
     font-safe-size: [px]/false [recommended: 16px]
     breakpoints-layout: * below *
 ```
@@ -21,10 +22,11 @@ breakpoints.scss (for: breakpoints-layout)
 
 ```
     meSass: (default)
-        xs - 600px
-        sm - 720px
-        lg - 1280px
-        xl - 1440px
+        sm - 600px
+        md - 720px
+        lg - 1200px
+        xl - 1400px
+        xxl - 1600px
 
     bootstrap-plus:
         sm: 576px
@@ -87,8 +89,8 @@ breakpoints.scss (for: breakpoints-layout)
 
 colors.scss
 
-meColor(name) will give you value
-msSocialColor(name) will give you value
+meColor(name)
+msSocialColor(name) - social media colors
 
 ```
     name: value

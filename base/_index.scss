@@ -1,0 +1,15 @@
+@import "../config/settings";
+@import "bootstrap/index";
+@import "normalizer/index";
+
+@if (map-get($ms-settings, normalizer) == "reset") {
+  @include reset();
+} @else if (map-get($ms-settings, normalizer) == "normalize") {
+  @include normalize();
+} @else {
+  @warn "You haven't use any CSS normalizer. Please consider providing `reset` or `normalize`"
+}
+
+@if (map-get($ms-settings, bootstrap) == true) {
+  @include bootstrapGridInit;
+}
