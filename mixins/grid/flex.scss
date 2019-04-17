@@ -1,4 +1,4 @@
-@mixin meFlex($axisY: center, $axisX: center, $direction: row, $wrap: false) {
+@mixin meFlex($axisY: center, $axisX: center, $direction: row, $wrap: null) {
   $errMsgAxisY: "meSass Failed: Provided wrong axisY value. {top, center, bottom} -> You've provided: `#{$axisY}`.";
   $errMsgAxisX: "meSass Failed: Provided wrong axisX value. {left, center, right} -> You've provided: `#{$axisX}`.";
   $errMsgDirection: "meSass Failed: Provided wrong direction value. {row, column} -> You've provided: `#{$direction}`.";
@@ -31,14 +31,10 @@
       @error #{$errMsgAxisX};
     }
 
-    @if ($reverse == true) {
-      flex-direction: row-reverse;
-    } @else {
-      flex-direction: row;
-    }
+    flex-direction: row;
   } @else if ($direction == "column") {
     @if ($axisY == "center") {
-      justify-content: flex-start;
+      justify-content: center;
     } @else if ($axisY == "top") {
       justify-content: flex-start;
     } @else if ($axisY == "bottom") {
@@ -61,15 +57,17 @@
       @error #{$errMsgAxisX};
     }
 
-    @if ($wrap == true) {
-      flex-wrap: wrap;
-    } @else if ($wrap == false) {
-      flex-wrap: nowrap;
-    } @else if ($wrap == null) {
-    } @else {
-      @error #{$errMsgWrap};
-    }
+    flex-direction: column;
   } @else {
     @error #{$errMsgDirection};
+  }
+
+  @if ($wrap == true) {
+    flex-wrap: wrap;
+  } @else if ($wrap == false) {
+    flex-wrap: nowrap;
+  } @else if ($wrap == "null") {
+  } @else {
+    @error #{$errMsgWrap};
   }
 }
