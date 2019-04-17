@@ -1,17 +1,22 @@
 /*!
   Project name: meSass
   Author: Amadeusz Blanik
-  
+
   &copy; 2019
 */
 
 @warn "meSass() :: Start…";
 
-@import "config/all";
-@import "function/all";
-@import "mixins/all";
+@import "base/index";
+@import "vendors/index";
 
-@import "blocks/all";
-@import "layouts/all";
+@import "config/index";
+@import "function/index";
+@import "mixins/index";
+
+@import "utilities/index";
+@import "layouts/index";
+@import "components/index";
+@import "pages/index";
 
 @warn "meSass() :: Successfully compiled…";
