@@ -46,7 +46,7 @@
     }
 
     @if ($axisX == "center") {
-      align-items: flex-start;
+      align-items: center;
     } @else if ($axisX == "left") {
       align-items: flex-start;
     } @else if ($axisX == "right") {
