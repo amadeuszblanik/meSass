@@ -266,6 +266,13 @@ resets.scss
 
 ```
 
+section.scss
+
+```
+    @mixin meSection($paddingY, $container: false)
+```
+
+
 typeface.scss
 
 ```
