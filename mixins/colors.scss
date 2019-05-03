@@ -35,3 +35,14 @@
     }
   }
 }
+
+@mixin meBlurBackground($value) {
+  @supports (backdrop-filter: blur($value * 1px)) {
+    backdrop-filter: blur($value * 1px);
+    @content;
+  }
+  @supports (-webkit-backdrop-filter: blur($value * 1px)) {
+    -webkit-backdrop-filter: blur($value * 1px);
+    @content;
+  }
+}
