@@ -1,6 +1,6 @@
 # meSass
 
-Current state: alpha ~ Version: 0.1.1 ~ MIT ~ Blanik.me ~ 2018 - 2019
+Current state: alpha ~ Version: 0.2.0 ~ MIT ~ Blanik.me ~ 2018 - 2019
 
 This is a first public version of meSass (formerly named: SASS.Framework).
 It's still in alpha state, but growing rapidly!
@@ -224,7 +224,7 @@ grid/grid.scss
 breakpoints.scss
 
 ```
-    @include meBreakpoint($min, $max, $map){
+    @include meBreakpoint($min, $max, $map) {
         @content
     }
     $map - optional
@@ -237,12 +237,15 @@ colors.scss
     @include meSocialColorHover
     @include meSocialColorBackground
     @include meSocialColorBackgroundHover
+    @include meBlurBackground($value-in-px) {
+        @content 
+    }
 ```
 
 forms.scss
 
 ```
-    @include mePlaceholder{
+    @include mePlaceholder {
         @content
     }
 ```
