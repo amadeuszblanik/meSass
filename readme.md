@@ -5,6 +5,16 @@ Current state: alpha ~ Version: 0.2.0 ~ MIT ~ Blanik.me ~ 2018 - 2019
 This is a first public version of meSass (formerly named: SASS.Framework).
 It's still in alpha state, but growing rapidly!
 
+## How to use
+Compile `index.scss` to build old-fashioned one **file css** or include `@import ".\..\react.scss"` in *every* page or component file to build css file that contains only needed code.
+
+## Tested with:
+* sass ^1.0.0
+* dart-sass ^1.20.0
+* gulp-sass ^4.0.0
+* node-sass ^4.0.0
+* @zeit/next-sass
+
 ## Config
 
 Config path: /config
