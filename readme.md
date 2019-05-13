@@ -263,7 +263,7 @@ forms.scss
 motions.scss
 
 ```
-    soon
+    @include meMotion($property: "all", $duration: msMotion(duration), $timing-function: msMotion(standard))
 ```
 
 resets.scss
