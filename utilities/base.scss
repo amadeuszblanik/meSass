@@ -1,0 +1,41 @@
+html {
+  color: meColor(text);
+  background: meColor(light);
+
+  font-family: msTypeface(default);
+  font-size: msTypeface(base-font-size);
+  font-weight: msTypeface(base-font-weight);
+
+}
+
+a {
+  @include meLink(meColor(text), none, meColor(text), none);
+}
+
+@include meHeaders {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: inRem(72);
+}
+
+h2 {
+  font-size: inRem(48);
+}
+
+h3 {
+  font-size: inRem(36);
+}
+
+h4 {
+  font-size: inRem(26);
+}
+
+h5 {
+  font-size: inRem(20);
+}
+
+h6 {
+  font-size: inRem(16);
+}
