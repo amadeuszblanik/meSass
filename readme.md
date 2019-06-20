@@ -1,6 +1,6 @@
 # meSass
 
-Current state: alpha ~ Version: 0.2.0 ~ MIT ~ Blanik.me ~ 2018 - 2019
+Current state: alpha ~ Version: 0.2.2 ~ MIT ~ Blanik.me ~ 2018 - 2019
 
 This is a first public version of meSass (formerly named: SASS.Framework).
 It's still in alpha state, but growing rapidly!
