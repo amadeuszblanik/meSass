@@ -4,3 +4,7 @@ body {
   font-size: msTypeface(base-font-size) * 1px;
   background-color: meColor(background);
 }
+
+* {
+  box-sizing: border-box;
+}
