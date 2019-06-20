@@ -1,0 +1,6 @@
+body {
+  color: meColor(text);
+  font-family: msTypeface(default);
+  font-size: msTypeface(base-font-size) * 1px;
+  background-color: meColor(background);
+}
