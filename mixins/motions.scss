@@ -1,4 +1,4 @@
-@mixin meMotion($property: "all", $timing-function: msMotion(standard), $duration: msMotion(duration)){
+@mixin meMotion($property: "all", $duration: msMotion(duration), $timing-function: msMotion(standard)){
     transition-duration: $duration;
     transition-timing-function: $timing-function;
     transition-property: $property;
